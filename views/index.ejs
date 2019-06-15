@@ -11,16 +11,26 @@
 
     <link rel="stylesheet" href="./css/style.css">
 
-    <title>Chinese Typer</title>
+    <title>中文 Typer</title>
   </head>
   <body>
     <div class="container m-5">
       <form>
+        <h1 class="card-title">
+          <b>中文 Typer</b>
+        </h1>
+        
         <div class="form-group">
-          <textarea id="textarea" class="form-control" placeholder="Type text here!" rows="15" cols="15"></textarea>
+          <h6 class="card-title">Textarea</h6>
+          <textarea id="textarea" class="form-control" placeholder="Type 中文 here!" rows="15" cols="15"></textarea>
         </div>
 
-        <button type="button" class="btn btn-raised btn-success button" onclick="document.cookie=$('#textarea').val();">Save</button>
+        <div class="form-group">
+          <h6 class="card-title">Documents</h6>
+          <textarea id="saved" class="form-control" rows="5" disabled></textarea>
+        </div>
+        
+        <button type="button" class="btn btn-raised btn-success button" onclick="setCookie('txt-' + prompt('Save Document as (Name)'), $('#textarea').val());">Save</button>
         <button type="button" class="btn btn-raised btn-secondary generate" onclick="alert(wordList[Math.floor(Math.random() * wordList.length)])">Random Prompt</button>
       </form>
     </div>
