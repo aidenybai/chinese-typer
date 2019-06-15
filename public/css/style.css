@@ -1,0 +1,14 @@
+.button {
+  background: #14C2AA !important;
+}
+
+.generate {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+textarea {
+  background: #fff !important;
+  border-radius: 5px !important;
+  padding: 10px !important;
+}
